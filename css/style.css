@@ -1,0 +1,107 @@
+@font-face {
+ font-family: Lato-Light;
+ src: url("/assets/fonts/Lato-Light.eot");
+}
+
+@font-face {
+ font-family: Lato-Light;
+ src: url("/assets/fonts/Lato-Light.ttf");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Lato-Light,Helvetica,Arial,sans-serif;
+}
+
+h2 {
+	color: white;
+	font-family: Lato-Light,Helvetica,Arial,sans-serif;
+}
+
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.btn-dark {
+    border-radius: 0;
+    color: white;
+    background-color: rgba(255,48,48,0.6);
+}
+
+.btn-dark:hover {
+    color: grey;
+    background-color: rgba(205,0,0,0.7);
+}
+
+
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/bg.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+.goal {
+	display: table;
+	color: white;
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background: #CD0000 no-repeat center;
+    background-size: cover;
+    vertical-align: center;
+
+
+}
+
+.training {
+	display: table;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: white no-repeat center;
+    background-size: cover;
+}
+
+
+.results {
+	display: table;
+	color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #4d4d4d no-repeat center;
+    background-size: cover;
+}
+
+
+
+#bigger-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
+
+#stronger-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
+
+#leaner-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
