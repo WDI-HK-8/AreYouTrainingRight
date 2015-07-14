@@ -80,11 +80,75 @@ var Game = function(){
     console.log(this.cardio);
     console.log(this.strength);
   };
+    
+  //cascading list
+  this.populate = function(s1,s2) {
+    var s1 = document.getElementById(s1);
+    var s2 = document.getElementById(s2);
+    var optionArray = [];
+    s2.innerHTML = "";
+
+    if (s1.value == "cardioList") {
+      
+      optionArray = [
+        Object.keys(this.cardio)[0],
+        Object.keys(this.cardio)[1],
+        Object.keys(this.cardio)[2],
+        Object.keys(this.cardio)[3],
+        Object.keys(this.cardio)[4],
+        Object.keys(this.cardio)[5],
+        Object.keys(this.cardio)[6],
+        Object.keys(this.cardio)[7],
+        Object.keys(this.cardio)[8],
+        Object.keys(this.cardio)[9]
+      ];
+    }
+
+    else if(s1.value =="strengthList") {
+      optionArray = [
+        Object.keys(this.strength)[0],
+        Object.keys(this.strength)[1],
+        Object.keys(this.strength)[2],
+        Object.keys(this.strength)[3],
+        Object.keys(this.strength)[4]
+      ]; 
+    }
+
+    for (var option in optionArray) {
+      var newOption = document.createElement ("option");
+      newOption.innerHTML = optionArray[option];
+      s2.options.add(newOption);
+    }
+ 	};
+
+  //create new line
+  this.newLine = function() {
+    var html = '';
+
+    html += "<div class=\"row\">";
+    html += "  <select id=\"selectOne\" class=\"trainingRow\" name=\"selectOne\" onchange=\"game.populate(this.id,\"selectTwo\")\">"
+    html += "   <option value=\"\">What type of training do you do?</option>";
+    html += "    <option value=\"cardioList\">Cardiovascular Training</option>";
+    html += "    <option value=\"strengthList\">Strength Training</option>";
+    html += "  </select>";
+    html += "  <select id=\"selectTwo\" class=\"trainingRow\" name=\"selectTwo\"";
+    html += "    <option value=\"\">Which method are you using?</option>";
+    html += "  </select>";
+    html += "</div>";
+
+    $('.row').last().append(html);
+
+  };
 };
-  var game = new Game();
+  
+var game = new Game();
 
 $(document).ready(function(){
+  //change value of Hash
   $('#get-skinny').click(function() {game.getSkinny()});
   $('#get-big').click(function() {game.getBig()});
   $('#get-strong').click(function() {game.getStrong()});
+
+  //create new training event
+  $('#createButton').click(function() { game.newLine() });
 })
