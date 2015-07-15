@@ -18,8 +18,6 @@
             <a href="#about" class="btn btn-dark btn-lg about">Click here to start now!</a>
         </div>
     </header>
-
-
         <!-- Goals Page -->
     <section id="goal" class="goal">
         <div class="container">
@@ -77,5 +75,38 @@
       </div>
       <button type="button" class="col-lg-3 btn btn-default back-button2">Go back to your training</button>  
     </section>
+
+<!--goals buttons-->
+<body>
+  <section class="container">
+    <div class="buttons">
+      <button id="get-big">Get Huge Bro!</button>
+      <button id="get-skinny">Lose those love handles!</button>
+      <button id="get-strong">Bench 500lbs!</button>
+    </div>
+  </section>
+
+<!--cascading list-->
+   <section class="container">
+    <div class="options">
+      <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id,'selectTwo')">
+        <option value="">What type of training do you do?</option>
+        <option value="cardioList">Cardiovascular Training</option>
+        <option value="strengthList">Strength Training</option>
+      </select>
+      <select id="selectTwo" class="trainingRow" name="selectTwo">
+       <option value="">Which method are you using?</option>
+      </select>
+    </div>
+  </section>
+
+
+  <!--create button-->
+    <div>
+      <button id="addButton">Add training</button>
+    </div>
+
   </body>
 </html>
+
+

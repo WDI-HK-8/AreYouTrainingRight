@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var Game = function(){
 	var score = 35 / 50 * 100;
 	this.advice = function() {
@@ -70,8 +71,12 @@ var Game = function(){
 	}	
 }
 
-$(document).ready(function(){
 
+var game = new Game();
+
+
+$(document).ready(function(){
+=======
 function Game() {
   this.cardio_labels = {
     hiit         : "HIIT Training",
