@@ -71,91 +71,119 @@ var Game = function(){
 	}	
 }
 
-=======
->>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
-//Global Variables  
-var array = [];
-var cardio = {
-  "HIIT Training":                      0,
-  "Sprint Training":                    0,
-  "Short Distance Running (<6km)":      0,
-  "Middle Distance Running (6-12km)":   0,
-  "Long Distance Running (<12km)":      0,
-  "Boxing/Kick Boxing":                 0,
-  "Swimming - sprints":                 0,
-  "Swimming - long distance":           0,
-  "Cycling - sprints":                  0,    
-  "Cycling - long distance":            0,
-};
-<<<<<<< HEAD
->>>>>>> Table now working
-=======
->>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
 
-var strength = {
-  "Conventional Weights Training (1-5 repetitions per set)":  0,
-  "Conventional Weights Training (5+ repetitions per set)":   0,
-  "Crossfit baby!":                                           0,
-  "Olympic lifts (1-5 repetitions per set)":                  0,
-  "Olympic lifts (5+ repetitions per set)":                   0,
-};
+var game = new Game();
 
-var getSkinny = function() {
-  this.cardio["HIIT Training"]                              = 10;
-  this.cardio["Sprint Training"]                            = 10;
-  this.cardio["Short Distance Running (<6km)"]              = 5;
-  this.cardio["Middle Distance Running (6-12km)"]           = 5;
-  this.cardio["Long Distance Running (<12km)"]              = 6;
-  this.cardio["Boxing/Kick Boxing"]                         = 8;
-  this.cardio["Swimming - sprints"]                         = 8;
-  this.cardio["Swimming - long distance"]                   = 7;
-  this.cardio["Cycling - sprints"]                          = 8;
-  this.cardio["Cycling - long distance"]                    = 4;
-  this.strength["Conventional Weights Training (1-5 repetitions per set)"] = 4;
-  this.strength["Conventional Weights Training (5+ repetitions per set)"]  = 3;
-  this.strength["Crossfit baby!"]                           = 6;
-  this.strength["Olympic lifts (1-5 repetitions per set)"]  = 4;
-  this.strength["Olympic lifts (5+ repetitions per set)"]   = 3;
+
+$(document).ready(function(){
+=======
+function Game() {
+  this.cardio_labels = {
+    hiit         : "HIIT Training",
+    run_sprint   : "Sprint Training",
+    run_short    : "Short Distance Running (<6km)",
+    run_mid      : "Middle Distance Running (6-12km)",
+    run_long     : "Long Distance Running (<12km)",
+    contact      : "Boxing/Kick Boxing",
+    swim_sprint  : "Swimming - sprints",
+    swim_long    : "Swimming - long distance",
+    cycle_sprint : "Cycling - sprints",
+    cycle_long   : "Cycling - long distance"
+  };
+
+  //Define value of training element
+  this.cardio = {
+    hiit         : 0,
+    run_sprint   : 0,
+    run_short    : 0,
+    run_mid      : 0,
+    run_long     : 0,
+    contact      : 0,
+    swim_sprint  : 0,
+    swim_long    : 0,
+    cycle_sprint : 0,
+    cycle_long   : 0,
+  };
+
+  this.strength_labels = {
+    weights_lowrep  : "Conventional Weights Training (1-5 repetitions per set)",
+    weights_highrep : "Conventional Weights Training (5+ repetitions per set)",
+    crossfit        : "Crossfit baby!",
+    olympic_lowrep  : "Olympic lifts (1-5 repetitions per set)",
+    olympic_highrep : "Olympic lifts (5+ repetitions per set)"
+  };
+
+  this.strength = {
+    weights_lowrep  : 0,
+    weights_highrep : 0,
+    crossfit        : 0,
+    olympic_lowrep  : 0,
+    olympic_highrep : 0
+  };
+}
+
+Game.prototype.getSkinny = function() {
+  this.cardio.hiit         = 10;
+  this.cardio.run_sprint   = 10;
+  this.cardio.run_short    = 5;
+  this.cardio.run_mid      = 5;
+  this.cardio.run_long     = 6;
+  this.cardio.contact      = 8;
+  this.cardio.swim_sprint  = 8;
+  this.cardio.swim_long    = 7;
+  this.cardio.cycle_sprint = 8;
+  this.cardio.cycle_long   = 4;
+
+  this.strength.weights_lowrep   = 4;
+  this.strength.weights_highrep  = 3;
+  this.strength.crossfit         = 6;
+  this.strength.olympic_lowrep   = 4;
+  this.strength.olympic_highrep  = 3;
+
   console.log(this.cardio);
   console.log(this.strength);
 };
 
-var getBig = function() {
-  this.cardio["HIIT Training"]                              = 6;
-  this.cardio["Sprint Training"]                            = 6;
-  this.cardio["Short Distance Running (<6km)"]              = 4;
-  this.cardio["Middle Distance Running (6-12km)"]           = 3;
-  this.cardio["Long Distance Running (<12km)"]              = 2;
-  this.cardio["Boxing/Kick Boxing"]                         = 2;
-  this.cardio["Swimming - sprints"]                         = 6;
-  this.cardio["Swimming - long distance"]                   = 5;
-  this.cardio["Cycling - sprints"]                          = 5;
-  this.cardio["Cycling - long distance"]                    = 2;
-  this.strength["Conventional Weights Training (1-5 repetitions per set)"] = 8;
-  this.strength["Conventional Weights Training (5+ repetitions per set)"]  = 10;
-  this.strength["Crossfit baby!"]                           = 8;
-  this.strength["Olympic lifts (1-5 repetitions per set)"]  = 8;
-  this.strength["Olympic lifts (5+ repetitions per set)"]   = 10;
+Game.prototype.getBig = function() {
+  this.cardio.hiit         = 6;
+  this.cardio.run_sprint   = 6;
+  this.cardio.run_short    = 4;
+  this.cardio.run_mid      = 3;
+  this.cardio.run_long     = 2;
+  this.cardio.contact      = 2;
+  this.cardio.swim_sprint  = 6;
+  this.cardio.swim_long    = 5;
+  this.cardio.cycle_sprint = 5;
+  this.cardio.cycle_long   = 2;
+
+  this.strength.weights_lowrep   = 8;
+  this.strength.weights_highrep  = 10;
+  this.strength.crossfit         = 8;
+  this.strength.olympic_lowrep   = 8;
+  this.strength.olympic_highrep  = 10;
+
   console.log(this.cardio);
   console.log(this.strength);
 };
 
-var getStrong = function() {
-  this.cardio["HIIT Training"]                              = 5;
-  this.cardio["Sprint Training"]                            = 5;
-  this.cardio["Short Distance Running (<6km)"]              = 2;
-  this.cardio["Middle Distance Running (6-12km)"]           = 1;
-  this.cardio["Long Distance Running (<12km)"]              = 1;
-  this.cardio["Boxing/Kick Boxing"]                         = 2;
-  this.cardio["Swimming - sprints"]                         = 5;
-  this.cardio["Swimming - long distance"]                   = 3;
-  this.cardio["Cycling - sprints"]                          = 4;
-  this.cardio["Cycling - long distance"]                    = 2;
-  this.strength["Conventional Weights Training (1-5 repetitions per set)"] = 10;
-  this.strength["Conventional Weights Training (5+ repetitions per set)"]  = 7;
-  this.strength["Crossfit baby!"]                           = 8;
-  this.strength["Olympic lifts (1-5 repetitions per set)"]  = 10;
-  this.strength["Olympic lifts (5+ repetitions per set)"]   = 8;
+Game.prototype.getStrong = function() {
+  this.cardio.hiit         = 5;
+  this.cardio.run_sprint   = 5;
+  this.cardio.run_short    = 2;
+  this.cardio.run_mid      = 1;
+  this.cardio.run_long     = 1;
+  this.cardio.contact      = 2;
+  this.cardio.swim_sprint  = 5;
+  this.cardio.swim_long    = 3;
+  this.cardio.cycle_sprint = 4;
+  this.cardio.cycle_long   = 2;
+
+  this.strength.weights_lowrep   = 10;
+  this.strength.weights_highrep  = 7;
+  this.strength.crossfit         = 8;
+  this.strength.olympic_lowrep   = 10;
+  this.strength.olympic_highrep  = 8;
+
   console.log(this.cardio);
   console.log(this.strength);
 };
@@ -169,11 +197,11 @@ function populate(s1, s2) {
 
   switch (s1.value) {
     case "cardioList":
-      optionArray = Object.keys(cardio);
+      optionArray = game.cardio_labels;
       break;
 
     case "strengthList":
-      optionArray = Object.keys(strength);
+      optionArray = game.strength_labels;
       break;
   }
 
@@ -184,51 +212,49 @@ function populate(s1, s2) {
   }
 };
 
+var game = new Game();
+
 $(document).ready(function(){
+
   //change value of Hash
-  $('#get-skinny').click(function() { getSkinny() });
-  $('#get-big').click(   function() { getBig()    });
-  $('#get-strong').click(function() { getStrong() });
+  $('#get-skinny').click(function() { game.getSkinny() });
+  $('#get-big').click(   function() { game.getBig()    });
+  $('#get-strong').click(function() { game.getStrong() });
 
   //create new training event
   $('#addButton').click(function() {
+    
     var style = $('#selectOne').val();
     var method = $('#selectTwo').val();
     var html ='';
-    
-    html += '<div class="row">';
-    html += ' <div class="training-method col-xs-3">'+ method + '</div>';
-    html += ' <button class="cancel">Remove training event</button>';
-    html += '</div>';
 
-    
+    html += '<div class="row">'
+    html += ' <div class="training-method col-xs-3">'+ method + '</div>'
+    html += ' <button class="cancel">Cancel</button>'
+    html += '</div>'
+
+
+    console.log(style)
+    console.log(method)
+
     $('.options').last().append(html);
-    
-    if (style == "cardioList"){
-      array.push(cardio[method]);
-    };
-    else if (style == "strengthList") {
-      array.push(strength[method]);
-    };
-     
-    console.log(array);
+    // var html = '';
 
-    var score = 0;
-      for (i=0; i<array.length; i++) {
-      score +=array[i];
-      };
-      console.log(score);
-<<<<<<< HEAD
-  });
-  
-  //remove training event
-  $(document).on('click', '.cancel',function(){
-    $(this).parent().fadeOut('slow', function(){
-      $(this).remove();
-    });
-    console.log(array);
-  });
+    // html += '<div class="row">';
+    // html += '  <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id, \"selectTwo\")"';
+    // html += '    <option value="">             What type of training do you do? </option>';
+    // html += '    <option value="cardioList">   Cardiovascular Training          </option>';
+    // html += '    <option value="strengthList"> Strength Training                </option>';
+    // html += '  </select>';
 
+    // html += '  <select id="selectTwo" class="trainingRow" name="selectTwo"';
+    // html += '    <option value=""> Which method are you using? </option>';
+    // html += '  </select>';
+    // html += '</div>';
+
+ 
+  });
+>>>>>>> initial table function working
 
 	$('.results-button').click(function() { game.advice() });
 
@@ -273,16 +299,3 @@ $(document).ready(function(){
 	    });
 	})
 })	
-=======
-  });
-  
-  //remove training event
-  $(document).on('click', '.cancel',function(){
-    $(this).parent().fadeOut('slow', function(){
-      $(this).remove();
-    });
-    console.log(array);
-  });
-});
-
->>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
