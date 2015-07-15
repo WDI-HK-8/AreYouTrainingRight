@@ -23,6 +23,7 @@ The user is then prompted to add what their weekly training regime is. Once adde
 
 ### Installation instructions
 1.Fork this repo!
+
 2.Initialise a repo on a local directory
 ```sh
 $ git init
