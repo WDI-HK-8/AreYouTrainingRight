@@ -1,4 +1,4 @@
-var Game = function() {
+function Game() {
   this.cardio_labels = {
     hiit         : "HIIT Training",
     run_sprint   : "Sprint Training",
@@ -110,8 +110,7 @@ Game.prototype.getStrong = function() {
 };
 
 //cascading list
-function populate(s1,s2) {
-  debugger
+function populate(s1, s2) {
   var s1 = document.getElementById(s1);
   var s2 = document.getElementById(s2);
   var optionArray = [];
@@ -144,22 +143,37 @@ $(document).ready(function(){
   $('#get-strong').click(function() { game.getStrong() });
 
   //create new training event
-  $('#createButton').click(function() {
-    var html = '';
+  $('#addButton').click(function() {
+    
+    var style = $('#selectOne').val();
+    var method = $('#selectTwo').val();
+    var html ='';
 
-    html += '<div class="row">';
-    html += '  <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id, \"selectTwo\")"';
-    html += '    <option value="">             What type of training do you do? </option>';
-    html += '    <option value="cardioList">   Cardiovascular Training          </option>';
-    html += '    <option value="strengthList"> Strength Training                </option>';
-    html += '  </select>';
+    html += '<div class="row">'
+    html += ' <div class="training-method col-xs-3">'+ method + '</div>'
+    html += ' <button class="cancel">Cancel</button>'
+    html += '</div>'
 
-    html += '  <select id="selectTwo" class="trainingRow" name="selectTwo"';
-    html += '    <option value=""> Which method are you using? </option>';
-    html += '  </select>';
-    html += '</div>';
 
-    $('.row').last().append(html);
+    console.log(style)
+    console.log(method)
+
+    $('.options').last().append(html);
+    // var html = '';
+
+    // html += '<div class="row">';
+    // html += '  <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id, \"selectTwo\")"';
+    // html += '    <option value="">             What type of training do you do? </option>';
+    // html += '    <option value="cardioList">   Cardiovascular Training          </option>';
+    // html += '    <option value="strengthList"> Strength Training                </option>';
+    // html += '  </select>';
+
+    // html += '  <select id="selectTwo" class="trainingRow" name="selectTwo"';
+    // html += '    <option value=""> Which method are you using? </option>';
+    // html += '  </select>';
+    // html += '</div>';
+
+ 
   });
 
 })

@@ -14,7 +14,7 @@
 <!--goals buttons-->
 <body>
   <section class="container">
-    <div class="row">
+    <div class="buttons">
       <button id="get-big">Get Huge Bro!</button>
       <button id="get-skinny">Lose those love handles!</button>
       <button id="get-strong">Bench 500lbs!</button>
@@ -23,22 +23,34 @@
 
 <!--cascading list-->
    <section class="container">
-    <div class="row">
+    <div class="options">
       <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id,'selectTwo')">
         <option value="">What type of training do you do?</option>
         <option value="cardioList">Cardiovascular Training</option>
         <option value="strengthList">Strength Training</option>
       </select>
-
       <select id="selectTwo" class="trainingRow" name="selectTwo">
        <option value="">Which method are you using?</option>
       </select>
     </div>
   </section>
 
+
   <!--create button-->
     <div>
-      <button id="createButton">Create</button>
+      <button id="addButton">Add training</button>
     </div>
   </body>
 </html>
+
+
+  <!--populating table -->
+
+  <section id="items-list" class="container">
+      <div class="row">
+        <div class="training-method col-xs-6">$60.00</div>
+         <button class="cancel">Cancel</button>
+      </div>
+
+   </section>   
+
