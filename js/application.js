@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var Game = function(){
 	var score = 35 / 50 * 100;
 	this.advice = function() {
@@ -70,6 +71,8 @@ var Game = function(){
 	}	
 }
 
+=======
+>>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
 //Global Variables  
 var array = [];
 var cardio = {
@@ -84,7 +87,10 @@ var cardio = {
   "Cycling - sprints":                  0,    
   "Cycling - long distance":            0,
 };
+<<<<<<< HEAD
 >>>>>>> Table now working
+=======
+>>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
 
 var strength = {
   "Conventional Weights Training (1-5 repetitions per set)":  0,
@@ -212,6 +218,7 @@ $(document).ready(function(){
       score +=array[i];
       };
       console.log(score);
+<<<<<<< HEAD
   });
   
   //remove training event
@@ -266,3 +273,16 @@ $(document).ready(function(){
 	    });
 	})
 })	
+=======
+  });
+  
+  //remove training event
+  $(document).on('click', '.cancel',function(){
+    $(this).parent().fadeOut('slow', function(){
+      $(this).remove();
+    });
+    console.log(array);
+  });
+});
+
+>>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
