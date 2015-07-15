@@ -37,6 +37,9 @@ $ git clone [origin url]
 ```
 ### Unsolved problems / Upcoming features
 There are several features in the pipeline to be added onto
-1. The functionality for users to enter their current diet which will then also be used in their effectiveness assessment. 
-2. More personalised tips in the final results page based on their inputed information. 
+1. The functionality for users to enter their current diet which will then also be used in their effectiveness assessment.
+2. More fitness goals and workout options
+3. More personalised tips in the final results page based on their inputed information. 
+
 ### Author contact information
+richie.bostock08@gmail.com
