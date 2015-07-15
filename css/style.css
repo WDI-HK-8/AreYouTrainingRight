@@ -22,6 +22,26 @@ h2 {
 	font-family: Lato-Light,Helvetica,Arial,sans-serif;
 }
 
+#square h1 {
+    color: #f46a1f;
+
+}
+
+
+#square h3 {
+    color: #474747;
+}
+
+p {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: grey;
+    font-size: 110%;
+}
+
+ul {
+    list-style-type: none;
+}
 
 .text-vertical-center {
     display: table-cell;
@@ -64,7 +84,7 @@ h2 {
 	color: white;
     position: relative;
     width: 100%;
-    height: 60%;
+    height: 63%;
     background: #CD0000 no-repeat center;
     background-size: cover;
     vertical-align: center;
@@ -76,7 +96,7 @@ h2 {
 	display: table;
     position: relative;
     width: 100%;
-    height: 80%;
+    height: 83%;
     background: white no-repeat center;
     background-size: cover;
 }
@@ -87,7 +107,7 @@ h2 {
 	color: white;
     position: relative;
     width: 100%;
-    height: 93%;
+    height: 85%;
     background: #4d4d4d no-repeat center;
     background-size: cover;
 }
@@ -113,7 +133,8 @@ h2 {
     padding-right: 20px;
     font-style: bold;
     font-size: 20px;
-    margin-left: 100px;
+    float: left;
+    margin-left: 50px;
     margin-top: 480px;
 }
 
@@ -126,8 +147,10 @@ h2 {
     padding-right: 50px;
     font-style: bold;
     font-size: 20px;
-    margin-left: 100px;
-    margin-top: 550px;
+    float:right;
+    margin-right: 50px;
+    margin-top: 50px;
+
 }
 
 .results-button {
@@ -139,7 +162,8 @@ h2 {
     padding-right: 100px;
     font-style: bold;
     font-size: 20px;
-    margin-left: 630px;
+    float: right;
+    margin-right: 50px;
     margin-top: 480px;
 }
 
@@ -149,11 +173,24 @@ h2 {
     background-color: rgba(200,48,48,0.8);
     border-radius: 360px;
     float:left;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 100px;
     text-align: center;
     vertical-align: center;
 }
+
+#square {
+    width: 800px;
+    height: 400px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    float:right;
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: center;
+    vertical-align: center;
+}
+
 
 .count
 {
@@ -161,3 +198,20 @@ h2 {
   color:white;
   font-size: 800%;
 }
+
+#yourTraining {
+    position: absolute;
+    float: left;
+    margin-top: 130px;
+    margin-left: 190px;
+    font-size: 180%;
+}
+
+#effective {
+    position: absolute;
+    float: left;
+    margin-top: 300px;
+    margin-left: 220px;
+    font-size: 240%;
+}
+
