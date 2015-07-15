@@ -22,16 +22,16 @@ The app will first ask the user what their primary fitness goal is. Based off wh
 The user is then prompted to add what their weekly training regime is. Once added, the user hits "calculate my score" which will sum the values of the training methods inputed, turn the value into a percentage and based off this percentage, populate an advice section.
 
 ### Installation instructions
-1. Fork this repo!
-2. Initialise a repo on a local directory
+1.Fork this repo!
+2.Initialise a repo on a local directory
 ```sh
 $ git init
 ```
-3. Intialise bower
+3.Intialise bower
 ```sh
 $ bower init
 ```
-4. Clone the repo
+4.Clone the repo
 ```sh
 $ git clone [origin url]
 ```
