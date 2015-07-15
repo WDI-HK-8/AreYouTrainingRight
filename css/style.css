@@ -1,0 +1,217 @@
+@font-face 	{
+ font-family: Lato-Light;
+ src: url("/assets/fonts/Lato-Light.eot");
+}
+
+@font-face {
+ font-family: Lato-Light;
+ src: url("/assets/fonts/Lato-Light.ttf");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Lato-Light,Helvetica,Arial,sans-serif;
+}
+
+h2 {
+	color: white;
+	font-family: Lato-Light,Helvetica,Arial,sans-serif;
+}
+
+#square h1 {
+    color: #f46a1f;
+
+}
+
+
+#square h3 {
+    color: #474747;
+}
+
+p {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: grey;
+    font-size: 110%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.btn-dark {
+    border-radius: 0;
+    color: white;
+    background-color: rgba(255,48,48,0.6);
+}
+
+.btn-dark:hover {
+    color: grey;
+    background-color: rgba(205,0,0,0.7);
+}
+
+
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/bg.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+.goal {
+	display: table;
+	color: white;
+    position: relative;
+    width: 100%;
+    height: 63%;
+    background: #CD0000 no-repeat center;
+    background-size: cover;
+    vertical-align: center;
+
+
+}
+
+.training {
+	display: table;
+    position: relative;
+    width: 100%;
+    height: 83%;
+    background: white no-repeat center;
+    background-size: cover;
+}
+
+
+.results {
+	display: table;
+	color: white;
+    position: relative;
+    width: 100%;
+    height: 85%;
+    background: #4d4d4d no-repeat center;
+    background-size: cover;
+}
+
+#bigger-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
+
+#stronger-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
+
+#leaner-button:hover{
+	background: url(/assets/getLeaner-hover.png) no-repeat;
+}
+
+.back-button {
+    border-radius: 180;
+    color: white;
+    border: none;
+    background-color: rgba(255,48,48,0.8);
+    padding-left: 20px; 
+    padding-right: 20px;
+    font-style: bold;
+    font-size: 20px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 480px;
+}
+
+.back-button2 {
+    border-radius: 180;
+    color: white;
+    border: none;
+    background-color: rgba(255,48,48,0.8);
+    padding-left: 50px; 
+    padding-right: 50px;
+    font-style: bold;
+    font-size: 20px;
+    float:right;
+    margin-right: 50px;
+    margin-top: 50px;
+
+}
+
+.results-button {
+    border-radius: 180;
+    color: white;
+    border: none;
+    background-color: rgba(255,167,0,0.8);
+    padding-left: 100px; 
+    padding-right: 100px;
+    font-style: bold;
+    font-size: 20px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 480px;
+}
+
+#circle {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(200,48,48,0.8);
+    border-radius: 360px;
+    float:left;
+    margin-top: 30px;
+    margin-left: 100px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#square {
+    width: 800px;
+    height: 400px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    float:right;
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: center;
+    vertical-align: center;
+}
+
+
+.count
+{
+  line-height: 400px;
+  color:white;
+  font-size: 800%;
+}
+
+#yourTraining {
+    position: absolute;
+    float: left;
+    margin-top: 130px;
+    margin-left: 190px;
+    font-size: 180%;
+}
+
+#effective {
+    position: absolute;
+    float: left;
+    margin-top: 300px;
+    margin-left: 220px;
+    font-size: 240%;
+}
+
