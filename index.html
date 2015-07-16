@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/application.js"></script>
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -8,7 +9,6 @@
 	<title>Are you training right?</title>
 </head>
 <body>
-<<<<<<< HEAD
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center wrapper">
@@ -21,12 +21,10 @@
         <!-- Goals Page -->
     <section id="goal" class="goal">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1>What is your primary fitness goal?</h1>
-                    <br></br>
-                </div>
-            </div>
+          <div class="col-lg-12 text-center">
+              <h1>What is your primary fitness goal?</h1>
+              <br></br>
+          </div>
         </div>
 
        	<div class="goal-buttons">
@@ -42,22 +40,34 @@
        	</div>
     </section>
 
-           <!-- Training Page -->
+    <!-- Training Page -->
     <section id="training" class="training">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1>What does your typical training week consist of?</h1>
-                </div>
-            </div>
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <h1>What does your typical training week consist of?</h1>
         </div>
-       
-          <button type="button" class="col-lg-3 btn btn-default back-button">Reselect your goal</button>
-                  
-        <button type="button" class="col-lg-3 btn btn-default results-button">Calculate your score!</button>
+      </div> 
+    
+       <!--cascading list-->
+      <div class="options">
+        <select id="selectOne" class="col-lg-4 trainingRowbtn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="populate(this.id,'selectTwo')">
+          <option value="">What type of training do you do?</option>
+          <option value="cardioList">Cardiovascular Training</option>
+          <option value="strengthList">Strength Training</option>
+        </select>
+        <select id="selectTwo" class=" col-lg-6 trainingRow btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <option value="">Which method are you using?</option>
+        </select>
+        <button type="button" class="col-lg-2 btn btn-default" id="addButton">ADD TRAINING SESSION</button>
+       <br></br>
+      </div>
+     
+      <button type="button" class="col-lg-3 btn btn-default results-button">CALCULATE YOUR SCORE!</button>
+
+    
     </section>
 
-        <!-- Results Page -->
+    <!-- Results Page -->
     <section id="results" class="results">
       <div class="container">
         <div class="col-lg-12 text-center">
@@ -73,40 +83,9 @@
 
       <div id="square" class="col-lg-9 tips"> 
       </div>
-      <button type="button" class="col-lg-3 btn btn-default back-button2">Go back to your training</button>  
+       <button type="button" class="col-lg-3 btn btn-default back-button">START AGAIN</button> 
+      <button type="button" class="col-lg-3 btn btn-default back-button2">CHANGE YOUR TRAINING</button>  
     </section>
-  <!--create button-->
-    <div>
-      <button id="addButton">Add training</button>
-    </div>
-
   </body>
-=======
-<!--goals buttons-->
-  <section class="container">
-    <div class="buttons">
-      <button id="get-big">Get Huge Bro!</button>
-      <button id="get-skinny">Lose those love handles!</button>
-      <button id="get-strong">Bench 500lbs!</button>
-    </div>
-  </section>
-  <!--add buttonbutton-->
-    <div>
-      <button id="addButton">Add training</button>
-    </div>
-<!--cascading list-->
-   <section class="container">
-    <div class="options">
-      <select id="selectOne" class="trainingRow" name="selectOne" onchange="populate(this.id,'selectTwo')">
-        <option value="">What type of training do you do?</option>
-        <option value="cardioList">Cardiovascular Training</option>
-        <option value="strengthList">Strength Training</option>
-      </select>
-      <select id="selectTwo" class="trainingRow" name="selectTwo">
-         <option value="">Which method are you using?</option>
-      </select>
-    </div>
-  </section> 
-</body>
->>>>>>> e32f6a2f4c0078e9b96444c6c059ea788ba109f6
 </html>
+
