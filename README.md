@@ -12,7 +12,9 @@ AreYouTrainingRight is a web-base self assessment app that measures the effectiv
 
 ### Technologies used
 GIT for version control
+
 HTML5/CSS3/JavaScript/jQuery/Bootstrap
+
 Bower dependancy management
 
 ### Design approach
