@@ -39,12 +39,18 @@ $ git clone [origin url]
 ```
 ### Unsolved problems / Upcoming features
 There are several features in the pipeline to be added:
+
 1. The functionality for users to enter their current diet which will then also be used in their effectiveness assessment.
+
 2. More fitness goals and workout options
+
 3. More personalised tips in the final results page based on their inputed information. 
 
+
 There are two problems that are ongoing:
+
 1. Some of the objects aren't responsive and therefore cause issue on different resolutions.
+
 2. When you click the "remove training session" button it currently removes the final index of the array where values are stored(array.pop()). This works if the user clicks on the last training session that they have added (which would be the case 80% of the time) however, if they remove a different training session it will still remove the value from the last array, not the corresponding value. 
 
 ### Author contact information
