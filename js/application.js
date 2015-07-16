@@ -229,9 +229,8 @@ $(document).ready(function(){
         if (score < 15) {
           html += " <h1>With the way you are training...why even bother!</h1>"
           html += "   <h3>To maximise your results, consider the following pro tips...</h3>"
-          html += "     <p><b>GETTING BIGGER:</b> If your main goal is to put on size, focus on exercises that best stimulate Hypertrophy.</p>"
+          html += "     <p><b>GETTING BIGGER:</b> If you want to put on size, focus on strength exercises performing between 5-12 repetitions per set (this best stimulates Hypertrophy!).</p>"
           html += "       <ul>"
-          html += "         <li><a href='http://www.bodybuilding.com/fun/hst1.htm' target='_blank'> Hypertrophy-Specific Training Program</a></li>"
           html += "         <li><a href='http://www.bodybuilding.com/fun/you-only-bigger-5-principles-for-greater-hypertrophy.html' target='_blank'>5 Principles For Greater Hypertrophy</a></li>"
           html += "       </ul>"
           html += "     <p><b>GETTING LEANER:</b> Cardio is your friend! But if you don't want to lose muscle while you burn away the fat, consider incorporating HIIT training into your routine.</p>" 
@@ -248,9 +247,8 @@ $(document).ready(function(){
         else if (score < 35) {
           html += " <h1>Pretty good, but theres room for improvement!</h1>"
           html += "   <h3>To maximise your results, consider the following pro tips...</h3>"
-          html += "     <p><b>GETTING BIGGER:</b> If your main goal is to put on size, focus on exercises that best stimulate Hypertrophy.</p>"
+          html += "     <p><b>GETTING BIGGER:</b> If you want to put on size, focus on strength exercises performing between 5-12 repetitions per set (this best stimulates Hypertrophy!).</p>"
           html += "       <ul>"
-          html += "         <li><a href='http://www.bodybuilding.com/fun/hst1.htm' target='_blank'> Hypertrophy-Specific Training Program</a></li>"
           html += "         <li><a href='http://www.bodybuilding.com/fun/you-only-bigger-5-principles-for-greater-hypertrophy.html' target='_blank'>5 Principles For Greater Hypertrophy</a></li>"
           html += "       </ul>"
           html += "     <p><b>GETTING LEANER:</b> Cardio is your friend! But if you don't want to lose muscle while you burn away the fat, consider incorporating HIIT training into your routine.</p>" 
