@@ -1,5 +1,18 @@
 //Global Variables  
 var array = [];
+var ClickCount = 0;
+var countClicks= function() {
+  var clickLimit = 9; //Max number of clicks
+  if(ClickCount>=clickLimit) {
+    alert("You can only add 10 training sessions! Are you sure you are getting enough rest?");
+    return false;
+  } else
+  {
+  ClickCount++;
+  return true;
+  }
+}
+
 var cardio = {
   "HIIT Training":                      0,
   "Sprint Training":                    0,
@@ -12,7 +25,6 @@ var cardio = {
   "Cycling - sprints":                  0,    
   "Cycling - long distance":            0,
 };
-
 var strength = {
   "Conventional Weights Training (1-5 repetitions per set)":  0,
   "Conventional Weights Training (5+ repetitions per set)":   0,
@@ -20,7 +32,6 @@ var strength = {
   "Olympic lifts (1-5 repetitions per set)":                  0,
   "Olympic lifts (5+ repetitions per set)":                   0,
 };
-
 var getSkinny = function() {
   this.cardio["HIIT Training"]                              = 10;
   this.cardio["Sprint Training"]                            = 10;
@@ -40,7 +51,6 @@ var getSkinny = function() {
   console.log(this.cardio);
   console.log(this.strength);
 };
-
 var getBig = function() {
   this.cardio["HIIT Training"]                              = 6;
   this.cardio["Sprint Training"]                            = 6;
@@ -60,7 +70,6 @@ var getBig = function() {
   console.log(this.cardio);
   console.log(this.strength);
 };
-
 var getStrong = function() {
   this.cardio["HIIT Training"]                              = 5;
   this.cardio["Sprint Training"]                            = 5;
@@ -81,9 +90,7 @@ var getStrong = function() {
   console.log(this.strength);
 };
 	
-  
-
-//populate trading list 
+//POPULATE TRAINING LISTS 
 function populate(s1, s2) {
   var s1 = document.getElementById(s1);
   var s2 = document.getElementById(s2);
@@ -107,13 +114,15 @@ function populate(s1, s2) {
   }
 };
 
+//=======================================================//
+
 $(document).ready(function(){
-  //change value of Hash
+  //CHANGE THE VALUE OF THE HASH
   $('#leaner-button').click(function() { getSkinny() });
   $('#bigger-button').click(   function() { getBig()    });
   $('#stronger-button').click(function() { getStrong() });
 
-  //create new training event
+  //CREATE NEW TRAINING EVENT
   $('#addButton').click(function() {
     var style = $('#selectOne').val();
     var method = $('#selectTwo').val();
@@ -126,28 +135,27 @@ $(document).ready(function(){
 
     $('.options').last().append(html);
     
-    //capture value of selected training events
+    //CAPTURE VALUE OF SELECTED TRAINING EVENTS
     if (style == "cardioList") {
       array.push(cardio[method]);
     } else if (style == "strengthList") {
       array.push(strength[method]);
     };
     console.log(array);
-
   });
   
-  //remove training event
+  //REMOVE TRAINING EVENT
   $(document).on('click', '.cancel',function(){
     $(this).parent().fadeOut('slow', function(){
       $(this).remove();
     });
     array.pop()
     console.log(array);
+    ClickCount--;
   });
 
-
-
-	//scroll down from about to goals
+  //======================= BUTTONS =======================//
+	//SCROLL DOWN FROM ABOUT TO GOALS
 	$(".about").click(function(){         
 		$("html, body").animate({             
 			scrollTop: $("#goal").offset().top         
@@ -155,41 +163,40 @@ $(document).ready(function(){
 
 	});
 
-    //restart test
+  //RESTART TEST
   $(".back-button").click(function(){         
     $("html, body").animate({             
       scrollTop: $("#goal").offset().top         
     }, 1000);
 
     $('.row').fadeOut('slow', function(){
-      $('.row').remove(); })
+      $('.row').remove(); });
 
-    array = []
-         
+    array = [];
   });
 
-  //scroll up to training 
+  //SCROLL UP TO TRAINING FROM RESULTS
 	$(".back-button2").click(function(){         
 		$("html, body").animate({             
 			scrollTop: $("#training").offset().top         
 		}, 1000);     
 	});
 
-  //scroll down to results
+  //SCROLL DOWN TO RESULT FROM TRAINING
 	$(".results-button").click(function(){         
 		$("html, body").animate({             
 			scrollTop: $("#results").offset().top         
 		}, 1000);     
 	});
 
-  //scroll down to training
+  //SCROLL DOWN FROM GOALS TO TRAINING
 	$("#bigger-button, #leaner-button, #stronger-button").click(function(){         
 		$("html, body").animate({             
 			scrollTop: $("#training").offset().top         
 		}, 1000);     
 	});
 
-	//Results button 
+	//CALCULATE RESULTS BUTTON 
 	$('.results-button').click(function() {
 			
       //adds up array
@@ -197,12 +204,10 @@ $(document).ready(function(){
       for (i=0; i<array.length; i++) {
       score +=array[i];
       };
-
       console.log(score);
 
-      //percentage display
+      //PERCENTAGE COUNTER
       if (score < 50) {
-
   	    $('.count').prop('Counter',0).animate({
   	       Counter: score * 2
   	    }, {
@@ -214,15 +219,14 @@ $(document).ready(function(){
          })
       }
 
-      else { $('.count').text("X"); 
+      else { $('.count').text("NOT"); 
       }
 
-      // Populate advice section
+      //POPULATE ADVICE SECTION
       var advice = function() {
-        
         var html = '';
 
-        if (score < 25) {
+        if (score < 15) {
           html += " <h1>With the way you are training...why even bother!</h1>"
           html += "   <h3>To maximise your results, consider the following pro tips...</h3>"
           html += "     <p><b>GETTING BIGGER:</b> If your main goal is to put on size, focus on exercises that best stimulate Hypertrophy.</p>"
@@ -241,7 +245,6 @@ $(document).ready(function(){
           html += "         <li><a href='http://stronglifts.com/5x5/' target='_blank'>5x5: The simplest way to get stronger</a></li>"
           html += "       </ul>"
         }
-
         else if (score < 35) {
           html += " <h1>Pretty good, but theres room for improvement!</h1>"
           html += "   <h3>To maximise your results, consider the following pro tips...</h3>"
@@ -260,9 +263,7 @@ $(document).ready(function(){
           html += "         <li><a href='http://www.mensfitness.com/training/build-muscle/10-strength-building-strategies' target='_blank'>10 strength building strategies that never die</a></li>"
           html += "         <li><a href='http://stronglifts.com/5x5/' target='_blank'>5x5: The simplest way to get stronger</a></li>"
           html += "       </ul>"
-
         }
-
         else if (score < 50){
           html += " <h1>Your training is on point! But what about your diet? </h1>"
           html += "   <p>In the gym, on the track or on the road you are a machine, a beast, a god amongst men. But what about in the kitchen? Understand how what goes in your mouth is effecting your results with these pro tips...</p>"
@@ -273,19 +274,17 @@ $(document).ready(function(){
           html += "         <li><a href='http://www.mensfitness.com/nutrition/what-to-eat/top-10-muscle-building-foods' target='_blank'>Top 10 muscle building foods</a></li>"
           html += "       </ul>"
         }
-
         else if (score > 50){
           html += " <h1>SWEET JESUS HOW ARE YOU STILL ALIVE???</h1>"
-          html += "   <h3>Recovery is just as important as training itself. Please please please read this article before it's too late!</h3>"
+          html += "   <h3>I definitely feel like you might be pushing yourself too hard! Recovery is just as important as training itself. Please please please read these articles and start resting up before it's too late!</h3>"
           html += "       <ul>"
           html += "         <li><a href='http://www.bodybuilding.com/fun/dickinson18.htm' target='_blank'> Recovery 101</a></li>"
           html += "         <li><a href='http://www.bodybuilding.com/fun/berardi34.htm' target='_blank'>All about recovery!</a></li>"
           html += "       </ul>"
         }
-
         $('.tips').html(html);
       } 
       advice();
-	   });
-	})	
+	 });
+})	
 

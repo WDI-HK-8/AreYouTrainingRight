@@ -22,6 +22,10 @@ h2 {
 	font-family: Lato-Light,Helvetica,Arial,sans-serif;
 }
 
+ul li {
+    font-size: 110%;
+}
+
 .options {
     margin-top: 2%;
     margin-left: 10%;
@@ -57,7 +61,7 @@ p {
     margin-left: 40px;
     margin-right: 40px;
     color: grey;
-    font-size: 110%;
+    font-size: 105%;
 }
 
 ul {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon">
+  <link rel="icon" type="image/png" href="/assets/logo_final_small.png" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/application.js"></script>
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,13 +12,13 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center wrapper">
-            <img id="logo" src="/assets/logo_final.png">
-            <h2>Is your training truely getting you closer to your goals? <br>Use our self-assessment tool to see how effective your training regime really is.</br></h2>
+            <img id="logo" alt=""src="/assets/logo_final.png">
+            <h2>Is your training truly getting you closer to your goals? <br>Use our self-assessment tool to see how effective your training regime really is.</br></h2>
             <br>
             <a href="#about" class="btn btn-dark btn-lg about">Click here to start now!</a>
         </div>
     </header>
-        <!-- Goals Page -->
+    <!-- Goals Page -->
     <section id="goal" class="goal">
         <div class="container">
           <div class="col-lg-12 text-center">
@@ -26,10 +26,10 @@
               <br></br>
           </div>
         </div>
-
+        <!-- Goals Buttons -->
        	<div class="goal-buttons">
        		<div class="col-lg-4 text-center">
-       			<img id="bigger-button" src="/assets/getBigger.png"></img>
+       			<img id="bigger-button" alt="" src="/assets/getBigger.png"></img>
        		</div>
        		<div class="col-lg-4 text-center">
        			<img id="leaner-button" src="/assets/getLeaner.png"></img>
@@ -39,7 +39,6 @@
        		</div>	
        	</div>
     </section>
-
     <!-- Training Page -->
     <section id="training" class="training">
       <div class="container">
@@ -47,8 +46,7 @@
           <h1>What does your typical training week consist of?</h1>
         </div>
       </div> 
-    
-       <!--cascading list-->
+      <!--cascading list-->
       <div class="options">
         <select id="selectOne" class="col-lg-4 trainingRowbtn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="populate(this.id,'selectTwo')">
           <option value="">What type of training do you do?</option>
@@ -58,15 +56,15 @@
         <select id="selectTwo" class=" col-lg-6 trainingRow btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <option value="">Which method are you using?</option>
         </select>
-        <button type="button" class="col-lg-2 btn btn-default" id="addButton">ADD TRAINING SESSION</button>
-       <br></br>
+        <!-- Add training session button -->
+        <button type="button" class="col-lg-2 btn btn-default" id="addButton" onclick="countClicks()">ADD TRAINING SESSION</button>
+        <br></br>
       </div>
-     
-      <button type="button" class="col-lg-3 btn btn-default results-button">CALCULATE YOUR SCORE!</button>
-
-    
+      <!--Calculate Score Button-->
+       <div class="calc-score"> 
+        <button type="button" class="col-lg-3 btn btn-default results-button">CALCULATE YOUR SCORE!</button>
+      </div>
     </section>
-
     <!-- Results Page -->
     <section id="results" class="results">
       <div class="container">
@@ -80,12 +78,11 @@
       </div>
       <div id="effective">EFFECTIVE
       </div>
-
       <div id="square" class="col-lg-9 tips"> 
       </div>
+      <!-- Result page buttons -->
        <button type="button" class="col-lg-3 btn btn-default back-button">START AGAIN</button> 
       <button type="button" class="col-lg-3 btn btn-default back-button2">CHANGE YOUR TRAINING</button>  
     </section>
   </body>
 </html>
-
