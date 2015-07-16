@@ -4,10 +4,11 @@
 AreYouTrainingRight is a web-base self assessment app that measures the effectiveness of your training routine in reaching your fitness goals. 
 
 ### Game Rules
-1. Click start assessment on the front page
-2. Choose your fitness goal from the three options provided.
+1. Click the start button on the home page to start the assessment!
+2. Choose your fitness goal from the three options provided (Get Lean!, Get Big! or Get Strong!)
 3. Input your weekly training schedule using the dropdown lists provided - be honest!
-3. Click "Get my results" to receive your effectiveness score and advice for improvements. 
+3. Click "Calculate my result" to receive your effectiveness score and advice for improvements.
+4. After reading your advice, press the "Go back to training" to change your training regime and check your score again!
 
 ### Technologies used
 GIT for version control
@@ -15,7 +16,7 @@ HTML5/CSS3/JavaScript/jQuery/Bootstrap
 Bower dependancy management
 
 ### Design approach
-From an asthetic point of view, the app contains simple one page structure with clearly defined sections. The UI is simple and intuitive, requiring minimal instruction with buttons to advanced clearly visible and labeled. 
+From an asthetic point of view, the app contains simple one page structure with clearly defined sections. The UI is simple and intuitive, requiring minimal instruction with buttons to advance clearly visible and labeled. 
 
 The app will first ask the user what their primary fitness goal is. Based off which button they press, this will modify the values of the different forms of training the the hash, based on on its effectiveness in acheiving the goal.
 
